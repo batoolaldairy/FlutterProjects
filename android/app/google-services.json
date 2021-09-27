@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1004005136302",
+    "project_id": "gridviewapp-8cfb0",
+    "storage_bucket": "gridviewapp-8cfb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004005136302:android:b59dbcb76bd194c617da3f",
+        "android_client_info": {
+          "package_name": "com.example.gridviewapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004005136302-2j5opqpgr34j7u28jblhcbcvsbjj9cgq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc1dqdOJfJ86fnyXsWpBTBOsnf_U3dgBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004005136302-2j5opqpgr34j7u28jblhcbcvsbjj9cgq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
