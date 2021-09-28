@@ -32,25 +32,34 @@ class _TabTowState extends State<TabTow> {
                     elevation: 30.0,
                     child: Column(
                       children: [
-                        CircleAvatar(
-                          backgroundImage: NetworkImage(
-                            snapshot.data!.docs[index].get('ProductImage'),
-                          ),
-                          backgroundColor: Colors.red.shade800,
-                          radius: 70,
-                        ),
-                        Text(
-                          snapshot.data!.docs[index].get('ProductPrice'),
-                          style: const TextStyle(
-                            fontSize: 15.0,
-                            color: Colors.deepOrange,
+                        Expanded(
+                          flex: 5,
+                          child: CircleAvatar(
+                            backgroundImage: NetworkImage(
+                              snapshot.data!.docs[index].get('ProductImage'),
+                            ),
+                            backgroundColor: Colors.red.shade800,
+                            radius: 70,
                           ),
                         ),
-                        Text(
-                          snapshot.data!.docs[index].get('ProductName'),
-                          style: const TextStyle(
-                            fontSize: 15.0,
-                            color: Colors.deepOrange,
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            snapshot.data!.docs[index].get('ProductPrice'),
+                            style: const TextStyle(
+                              fontSize: 15.0,
+                              color: Colors.deepOrange,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Text(
+                            snapshot.data!.docs[index].get('ProductName'),
+                            style: const TextStyle(
+                              fontSize: 15.0,
+                              color: Colors.deepOrange,
+                            ),
                           ),
                         ),
                       ],

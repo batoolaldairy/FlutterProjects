@@ -34,47 +34,57 @@ class _TabOneState extends State<TabOne> {
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.all(5.0),
-                                child: Text(
-                                  snapshot.data!.docs[index].get('name'),
-                                  style: const TextStyle(
-                                    fontSize: 15.0,
-                                    color: Colors.deepOrange,
-                                    fontWeight: FontWeight.w900,
-                                  ),
-                                ),
-                              ),
-                            ]),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
+                        Expanded(
+                          flex: 3,
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
-                                  snapshot.data!.docs[index].get('contact'),
-                                  style: const TextStyle(
-                                    fontSize: 15.0,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w900,
+                                Padding(
+                                  padding: EdgeInsets.all(5.0),
+                                  child: Text(
+                                    snapshot.data!.docs[index].get('name'),
+                                    style: const TextStyle(
+                                      fontSize: 15.0,
+                                      color: Colors.deepOrange,
+                                      fontWeight: FontWeight.w900,
+                                    ),
                                   ),
                                 ),
                               ]),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 0.0, right: 0.0),
-                          child: IconButton(
-                            onPressed: () {
-                              FirebaseFirestore.instance
-                                  .collection('contacts')
-                                  .doc(snapshot.data!.docs[index].id)
-                                  .delete();
-                            },
-                            icon: const Icon(Icons.delete),
-                            color: Colors.red[600],
+                        Expanded(
+                          flex: 2,
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    snapshot.data!.docs[index].get('contact'),
+                                    style: const TextStyle(
+                                      fontSize: 15.0,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                                  ),
+                                ]),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.only(top: 0.0, right: 0.0),
+                            child: IconButton(
+                              onPressed: () {
+                                FirebaseFirestore.instance
+                                    .collection('contacts')
+                                    .doc(snapshot.data!.docs[index].id)
+                                    .delete();
+                              },
+                              icon: const Icon(Icons.delete),
+                              color: Colors.red[600],
+                            ),
                           ),
                         )
                       ]),
